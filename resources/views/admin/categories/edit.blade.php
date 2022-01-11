@@ -2,18 +2,18 @@
 
 @section('content')
     <div class="row">
-        <div class="col-6 p-0 card card-primary">
+        <div class="col-6 card p-0 card-primary">
             <div class="card-header">
-                <h3 class="card-title">Create category</h3>
+                <h3 class="card-title">Edit category</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{ route('admin.categories.store') }}" method="POST">
+            <form action="{{--{{ route('admin.categories.store') }}--}}" method="POST">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Title</label>
-                        <input type="text" name="title" class="form-control @error('title')  is-invalid @enderror" id="exampleInputEmail1" placeholder="Title">
+                        <input type="text" value="{{$category->title}}" name="title" class="form-control @error('title')  is-invalid @enderror" id="exampleInputEmail1" placeholder="Title">
                         @error('title')
                         <span id="exampleInputEmail1-error" class="error invalid-feedback">{{ $message }}</span>
                         @enderror
@@ -22,7 +22,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </form>
         </div>

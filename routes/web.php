@@ -22,7 +22,9 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin'], function (){
         Route::get('/', 'IndexController')->name('admin.index');
     });
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function (){
-        Route::get('/', 'IndexController')->name('admin.categories');
+        Route::get('/', 'IndexController')->name('admin.categories.index');
+        Route::get('/create', 'CreateController')->name('admin.categories.create');
+        Route::post('/', 'StoreController')->name('admin.categories.store');
     });
 });
 

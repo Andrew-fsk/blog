@@ -9,7 +9,7 @@
                         <p>Main</p>
                     </a>
                 </li><li class="nav-item">
-                    <a href="{{ route('admin.categories') }}" class="nav-link">
+                    <a href="{{ route('admin.categories.index') }}" class="nav-link">
                         <i class="nav-icon far fa-bookmark"></i>
                         <p>Categories</p>
                     </a>
